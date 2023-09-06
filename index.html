@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="backgroundArtifacts">
+        <div class="artifacts" id="art1"></div>
+        <div class="artifacts" id="art2"></div>
+        <div class="artifacts" id="art3"></div>
+        <div class="artifacts" id="art4"></div>
+        <div class="artifacts" id="art5"></div>
+    </div>
+    <div id="backgroundContainer">
+        <div class="elements topHorizontal leftVertical" id="topLeft"><img src="./assets/pokeball.png" alt="pokeball"></div>
+        <div class="elements topHorizontal middleVertical" id="top">
+            <div>Pokédex</div>
+        </div>
+        <div class="elements topHorizontal rightVertical" id="topRight"></div>
+        <div class="elements middleHorizontal leftVertical" id="left"></div>
+        <div class="elements middleHorizontal middleVertical" id="middle">
+            <div id="searchContainer">
+                <form id="form" action="">
+                    <div id="searchBar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search" style="height: 22px;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        <input type="text" placeholder="Search Pokemon" id="search">
+                    </div>
+                    <div id="searchResults">
+
+                    </div>
+                </form>
+            </div>
+            <div id="nameInfoContainer">
+                <div id="miniColorLineOnName"></div>
+                <div id="nameInfo">
+                    <div id="name"></div>
+                    <div id="info">TYPE: <span id="type"></span> <br> EVOLUTION: <span id="evolutionNum"></span></div>
+                </div>
+            </div>
+            <button id="nextEvolution"><p>See Next Evolution</p></button>
+            <div id="details">
+                <div class="detailsElements">
+                    <p>HP :</p>
+                    <p>ATTACK :</p>
+                    <p>DEFENSE :</p>
+                    <p>SPEED :</p>
+                    <p>SPECIAL DEFENSE :</p>
+                    <p>SPECIAL ATTACK :</p>
+                </div>
+                <div class="detailsElements" style="align-items: center;">
+                    <p id="HPVal"></p>
+                    <p id="atkVal"></p>
+                    <p id="defVal"></p>
+                    <p id="spdVal"></p>
+                    <p id="sDefVal"></p>
+                    <p id="sAtkVal"></p>
+                </div>
+                <div class="detailsElements" id="barEnclosure">
+                    <div class="barContainer">
+                        <div class="bar" id="HPBar"></div>
+                    </div>
+                    <div class="barContainer">
+                        <div class="bar" id="atkBar"></div>
+                    </div>
+                    <div class="barContainer">
+                        <div class="bar" id="defBar"></div>
+                    </div>
+                    <div class="barContainer">
+                        <div class="bar" id="spdBar"></div>
+                    </div>
+                    <div class="barContainer">
+                        <div class="bar" id="sDefBar"></div>
+                    </div>
+                    <div class="barContainer">
+                        <div class="bar" id="sAtkBar"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="infoContainer">
+                <div id="miniColorLineOnInfo"></div>
+                <div id="mainInfo">
+                    <div></div>
+                    <p>Strengths: <span id="strengths" class="mainInfoElements"></span></p>
+                    <p>Weakness: <span id="weakness" class="mainInfoElements"></span></p>
+                    <p>Resistant: <span id="resistant" class="mainInfoElements"></span></p>
+                    <p>Vulnerable: <span id="vulnerable" class="mainInfoElements"></span></p>
+                    <div></div>
+                </div>
+            </div>
+            <img src="./assets/transparent.png" alt="circle" id="pokemonHolder">
+            <img src="./assets/transparent.png" alt="pokemon" id="pokemonImg">
+        </div>
+        <div class="elements middleHorizontal rightVertical" id="right"></div>
+        <div class="elements bottomHorizontal leftVertical" id="bottomLeft"></div>
+        <div class="elements bottomHorizontal middleVertical" id="bottom"></div>
+        <div class="elements bottomHorizontal rightVertical" id="bottomRight"></div>
+        <!-- <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/132.png" alt="pokemon" style="height: 400px; width: 400px;"> -->
+        <!-- <button>picture</button> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
