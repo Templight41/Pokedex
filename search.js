@@ -6,7 +6,7 @@ let visibleList = [];
 searchInput.addEventListener('keydown', (e)=> {
     if(e.key == "Enter") {
         let resultList = document.querySelectorAll('.results');
-        console.log(resultList)
+        // console.log(resultList)
         currentPokeIndex = parseInt(resultList[0].id);
         searchInput.value = "";
         searchResultContainer.innerHTML = "";
@@ -30,17 +30,13 @@ searchInput.addEventListener('input', (event) => {
         newElement = document.createElement("div");
         indexOfSearchPoke = nameList.indexOf(visibleList[i]);
         currentPokeId = indexOfSearchPoke + 1 + "";
-        if(currentPokeId.length==1) {
-            currentPokeId = `00${currentPokeId}`
-        } else if(currentPokeId.length==2) {
-            currentPokeId = `0${currentPokeId}`
-        }
         newElement.setAttribute("class", "results")
         newElement.setAttribute("id", indexOfSearchPoke)
-        if(currentPokeId!=="000") {
-            newElement.innerHTML = `<img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/${currentPokeId}.png" alt="picture" class="pokeImgSmall">${nameList[indexOfSearchPoke]}`
+        if(currentPokeId!=0) {
+            newElement.innerHTML = `<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${currentPokeId}.png" alt="picture" class="pokeImgSmall"><p>${nameList[indexOfSearchPoke]}</p>`
             searchResultContainer.append(newElement)
         }
+        // console.log(currentPokeId)
       }
 
     visibleList.sort()
