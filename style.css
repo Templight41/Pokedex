@@ -257,8 +257,9 @@ body {
 #searchBar {
     border: 1px solid rgba(255,255,255,0.4);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: end;
     align-items: center;
+    gap: 4px;
     width: 100%;
     border-radius: 14px;
     /* overflow: hidden; */
@@ -298,11 +299,12 @@ body {
 }
 
 input {
-    width: 260px;
+    width: 268px;
     height: 30px;
     background-color: transparent;
     border: transparent;
     color: white;
+    border-radius: 0px 14px 14px 0px;
     overflow: hidden;
     font-size: 18px;
 }
