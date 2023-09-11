@@ -217,6 +217,10 @@ body {
     z-index: 2;
 }
 
+#nextEvolution:active {
+    background-color: rgba(80,80,80,0.5)
+}
+
 #pokemonHolder {
     height: 65%;
     position: absolute;
@@ -285,7 +289,7 @@ body {
 }
 
 .results:hover {
-    background-color: rgba(80,80,80,0.5)
+    background-color: rgba(80,80,80,0.5);
 }
 
 .results p {
