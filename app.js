@@ -172,6 +172,10 @@ function pokeData() {
                     halfDamageTo = pokeDamageInfo.half_damage_to
                 })
                 .then(() => {
+                    halfDamageFromValue = "";
+                    halfDamageToValue = "";
+                    doubleDamageFromValue = ""; 
+                    doubleDamageToValue = "";
                     for(i=0;i<=halfDamageFrom.length-1;i++) {
                         halfDamageFromValue += `${halfDamageFrom[i].name}, `;
                     }
@@ -251,6 +255,10 @@ form.addEventListener('submit', (event)=> {
 
 //next evolution button
 btn.addEventListener("click", ()=> {
+    halfDamageFromValue = "";
+    doubleDamageToValue = "";
+    doubleDamageFromValue = "";
+    halfDamageToValue = ""
     const evolutionUrl = `https://pokeapi.co/api/v2/pokemon-species/${evolvedPokeId}/`
     axios.get(evolutionUrl)
         .then (async (res) => {
