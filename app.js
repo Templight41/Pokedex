@@ -68,10 +68,6 @@ newPokeOnReload()
 
 //pokemon data
 function pokeData() {
-    halfDamageFromValue = "";
-    halfDamageToValue = "";
-    doubleDamageFromValue = "";
-    doubleDamageToValue = "";
     const pokemonDataUrl = `https://pokeapi.co/api/v2/pokemon/${currentPokeIndex + 1}`;
     axios.get(pokemonDataUrl)
         .then((res)=> {
@@ -255,10 +251,6 @@ form.addEventListener('submit', (event)=> {
 
 //next evolution button
 btn.addEventListener("click", ()=> {
-    halfDamageFromValue = "";
-    doubleDamageToValue = "";
-    doubleDamageFromValue = "";
-    halfDamageToValue = ""
     const evolutionUrl = `https://pokeapi.co/api/v2/pokemon-species/${evolvedPokeId}/`
     axios.get(evolutionUrl)
         .then (async (res) => {
